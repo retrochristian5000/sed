@@ -14,19 +14,18 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 dnl Process this file with -*- autoconf -*- to produce a configure script.
+AC_PREREQ([2.72])
 AC_INIT([GNU sed],
         m4_esyscmd([build-aux/git-version-gen .tarball-version]),
         [bug-sed@gnu.org])
 AC_CONFIG_AUX_DIR(build-aux)
 AC_CONFIG_SRCDIR([sed/sed.c])
 AC_CONFIG_HEADERS([config.h:config_h.in])
-AC_PREREQ([2.64])
-AM_INIT_AUTOMAKE([1.11.1 dist-xz color-tests parallel-tests subdir-objects])
+AM_INIT_AUTOMAKE([1.16.5 dist-xz color-tests parallel-tests subdir-objects])
 AM_SILENT_RULES([yes]) # make --enable-silent-rules the default.
 AC_CONFIG_MACRO_DIR([m4])
 
 AC_PROG_CC
-AM_PROG_CC_C_O
 gl_EARLY
 gl_INIT
 gl_DISABLE_THREADS
